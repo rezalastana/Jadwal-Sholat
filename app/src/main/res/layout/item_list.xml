@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemlist_cv"
+    android:layout_width="200dp"
+    android:layout_height="300dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    android:layout_margin="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Fajr"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_fajr_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Value" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Dhuhr"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_dhuhr_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Asr"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_asr_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Maghrib"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_maghrib_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Isha"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_isha_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Value" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Imsak"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_imsak_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Value" />
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
