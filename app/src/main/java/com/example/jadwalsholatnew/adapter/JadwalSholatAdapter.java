@@ -10,19 +10,18 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.jadwalsholatnew.R;
 import com.example.jadwalsholatnew.model.jadwal.DataItem;
 
 import java.util.ArrayList;
 
-public class JadwalSHolatAdapter extends RecyclerView.Adapter<JadwalSHolatAdapter.viewHolder> {
+public class JadwalSholatAdapter extends RecyclerView.Adapter<JadwalSholatAdapter.viewHolder> {
 
     private ArrayList<DataItem> timings = new ArrayList<>();
     private Context context;
 
 
-    public JadwalSHolatAdapter(Context context) {
+    public JadwalSholatAdapter(Context context) {
         this.context = context;
     }
 
@@ -36,14 +35,14 @@ public class JadwalSHolatAdapter extends RecyclerView.Adapter<JadwalSHolatAdapte
 
     @NonNull
     @Override
-    public JadwalSHolatAdapter.viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public JadwalSholatAdapter.viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list,parent,false);
 
         return new viewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull JadwalSHolatAdapter.viewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull JadwalSholatAdapter.viewHolder holder, int position) {
 
     }
 

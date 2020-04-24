@@ -1,6 +1,8 @@
 package com.example.jadwalsholatnew.view.viewmodel;
 
 
+import android.util.Log;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -30,14 +32,15 @@ public class JadwalViewModel extends ViewModel {
             public void onResponse(Call<JadwalSholatResponse> call, Response<JadwalSholatResponse> response) {
                 JadwalSholatResponse responseSholat = response.body();
                 if (responseSholat != null && responseSholat.getData() != null) {
-                    ArrayList<DataItem> timings = responseSholat.getData();
-                    listJadwalSholat.postValue(timings);
+                    ArrayList<DataItem> data = responseSholat.getData();
+                    listJadwalSholat.postValue(data);
+                    Log.d("JadwalViewModel", "onSuccess: "+response.body());
                 }
             }
 
             @Override
             public void onFailure(Call<JadwalSholatResponse> call, Throwable t) {
-
+                Log.e("JadwalViewModel", "onFailure: "+t.getMessage());
             }
         });
     }

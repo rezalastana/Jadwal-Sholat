@@ -15,7 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.jadwalsholatnew.R;
-import com.example.jadwalsholatnew.adapter.JadwalSHolatAdapter;
+import com.example.jadwalsholatnew.adapter.JadwalSholatAdapter;
 import com.example.jadwalsholatnew.model.jadwal.DataItem;
 import com.example.jadwalsholatnew.view.viewmodel.JadwalViewModel;
 
@@ -27,7 +27,7 @@ import java.util.ArrayList;
  */
 public class JadwalFragment extends Fragment {
 
-    private JadwalSHolatAdapter jadwalSholatAdapter;
+    private JadwalSholatAdapter jadwalSholatAdapter;
     private RecyclerView rvJadwalSholat;
     private JadwalViewModel jadwalViewModel;
 
@@ -47,7 +47,7 @@ public class JadwalFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        jadwalSholatAdapter = new JadwalSHolatAdapter(getContext());
+        jadwalSholatAdapter = new JadwalSholatAdapter(getContext());
         jadwalSholatAdapter.notifyDataSetChanged();
 
         rvJadwalSholat = view.findViewById(R.id.fragmentjadwal_rv);
