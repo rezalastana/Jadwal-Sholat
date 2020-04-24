@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class JadwalSholatAdapter extends RecyclerView.Adapter<JadwalSholatAdapter.viewHolder> {
 
-    private ArrayList<DataItem> timings = new ArrayList<>();
+    private ArrayList<DataItem> data = new ArrayList<>();
     private Context context;
 
 
@@ -26,8 +26,8 @@ public class JadwalSholatAdapter extends RecyclerView.Adapter<JadwalSholatAdapte
     }
 
     public void setData(ArrayList<DataItem> items){
-        timings.clear();
-        timings.addAll(items);
+        data.clear();
+        data.addAll(items);
         notifyDataSetChanged();
 
     }
@@ -43,13 +43,18 @@ public class JadwalSholatAdapter extends RecyclerView.Adapter<JadwalSholatAdapte
 
     @Override
     public void onBindViewHolder(@NonNull JadwalSholatAdapter.viewHolder holder, int position) {
-
+        holder.tv_fajr_value.setText(data.get(position).getTimings().getFajr());
+        holder.tv_dhuhr_value.setText(data.get(position).getTimings().getDhuhr());
+        holder.tv_asr_value.setText(data.get(position).getTimings().getAsr());
+        holder.tv_maghrib_value.setText(data.get(position).getTimings().getMaghrib());
+        holder.tv_isha_value.setText(data.get(position).getTimings().getIsha());
+        holder.tv_imsak_value.setText(data.get(position).getTimings().getImsak());
     }
 
     @Override
     public int getItemCount() {
 
-        return timings.size();
+        return data.size();
     }
 
     public class viewHolder extends RecyclerView.ViewHolder {
