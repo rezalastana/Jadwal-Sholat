@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.jadwalsholatnew.view.fragmen.AlarmFragment;
+import com.example.jadwalsholatnew.view.fragmen.NgajiFragment;
 import com.example.jadwalsholatnew.view.fragmen.JadwalFragment;
 import com.example.jadwalsholatnew.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
         loadFragment(selectedFragment);
+
     }
 
     @Override
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 break;
 
             case R.id.menu_buttomnav_alarm:
-                selectedFragment = new AlarmFragment();
+                selectedFragment = new NgajiFragment();
                 loadFragment(selectedFragment);
                 break;
     }

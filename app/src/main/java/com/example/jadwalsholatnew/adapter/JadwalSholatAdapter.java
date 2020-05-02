@@ -43,6 +43,7 @@ public class JadwalSholatAdapter extends RecyclerView.Adapter<JadwalSholatAdapte
 
     @Override
     public void onBindViewHolder(@NonNull JadwalSholatAdapter.viewHolder holder, int position) {
+        holder.tv_tanggal_value.setText(data.get(position).getDate().getReadable());
         holder.tv_fajr_value.setText(data.get(position).getTimings().getFajr());
         holder.tv_dhuhr_value.setText(data.get(position).getTimings().getDhuhr());
         holder.tv_asr_value.setText(data.get(position).getTimings().getAsr());
@@ -59,12 +60,13 @@ public class JadwalSholatAdapter extends RecyclerView.Adapter<JadwalSholatAdapte
 
     public class viewHolder extends RecyclerView.ViewHolder {
 
-        TextView tv_fajr_value,tv_dhuhr_value, tv_asr_value, tv_maghrib_value, tv_isha_value, tv_imsak_value;
+        TextView tv_fajr_value,tv_dhuhr_value, tv_asr_value, tv_maghrib_value, tv_isha_value, tv_imsak_value, tv_tanggal_value;
         CardView cv_item;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
 
             cv_item = itemView.findViewById(R.id.itemlist_cv);
+            tv_tanggal_value = itemView.findViewById(R.id.tv_tanggal_value);
             tv_fajr_value = itemView.findViewById(R.id.tv_fajr_value);
             tv_dhuhr_value = itemView.findViewById(R.id.tv_dhuhr_value);
             tv_asr_value = itemView.findViewById(R.id.tv_asr_value);

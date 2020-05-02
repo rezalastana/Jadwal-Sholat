@@ -10,8 +10,8 @@
 
     <item
         android:id="@+id/menu_buttomnav_alarm"
-        android:title="Alarm Sholat"
-        android:icon="@drawable/alarm"
+        android:title="Ngaji"
+        android:icon="@drawable/ngaji"
         app:showAsAction="ifRoom"/>
 
 </menu>
